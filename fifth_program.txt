@@ -1,0 +1,27 @@
+/**************************************************************/
+
+import requests 
+response = requests.get("https://en.wikipedia.org/robots.txt") 
+test = response.text 
+print("robots.txt for http://www.wikipedia.org/") 
+print("===================================================") 
+      print(test)
+/*********************************************************/
+
+   ---------------------or----------------------------
+
+import requests
+
+# Make a GET request to the robots.txt file
+response = requests.get("https://en.wikipedia.org/robots.txt")
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Store the content of the robots.txt file
+    test = response.text
+
+    # Print the contents
+    print(test)
+else:
+    print("Failed to retrieve the robots.txt file.")
+/*******************************************************************/
